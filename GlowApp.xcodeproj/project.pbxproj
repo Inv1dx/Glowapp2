@@ -55,6 +55,19 @@
 		AA0000000000000000000046 /* DashboardMetricCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000048 /* DashboardMetricCardView.swift */; };
 		AA0000000000000000000047 /* HealthConnectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000049 /* HealthConnectionCardView.swift */; };
 		AA0000000000000000000048 /* MetricsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000050 /* MetricsRepositoryTests.swift */; };
+		AA0000000000000000000049 /* NutritionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000051 /* NutritionLog.swift */; };
+		AA0000000000000000000050 /* NutritionDaySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000052 /* NutritionDaySummary.swift */; };
+		AA0000000000000000000051 /* RoutineTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000053 /* RoutineTemplate.swift */; };
+		AA0000000000000000000052 /* RoutineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000054 /* RoutineEntry.swift */; };
+		AA0000000000000000000053 /* RoutineDaySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000055 /* RoutineDaySummary.swift */; };
+		AA0000000000000000000054 /* NutritionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000056 /* NutritionRepository.swift */; };
+		AA0000000000000000000055 /* RoutineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000057 /* RoutineRepository.swift */; };
+		AA0000000000000000000056 /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000058 /* NutritionViewModel.swift */; };
+		AA0000000000000000000057 /* NutritionQuickLogCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000059 /* NutritionQuickLogCardView.swift */; };
+		AA0000000000000000000058 /* NutritionLogEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000060 /* NutritionLogEditorView.swift */; };
+		AA0000000000000000000059 /* RoutineStatusCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000061 /* RoutineStatusCardView.swift */; };
+		AA0000000000000000000060 /* NutritionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000062 /* NutritionRepositoryTests.swift */; };
+		AA0000000000000000000061 /* RoutineRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000063 /* RoutineRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +131,19 @@
 		AB0000000000000000000048 /* DashboardMetricCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardMetricCardView.swift; sourceTree = "<group>"; };
 		AB0000000000000000000049 /* HealthConnectionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthConnectionCardView.swift; sourceTree = "<group>"; };
 		AB0000000000000000000050 /* MetricsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsRepositoryTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000051 /* NutritionLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionLog.swift; sourceTree = "<group>"; };
+		AB0000000000000000000052 /* NutritionDaySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionDaySummary.swift; sourceTree = "<group>"; };
+		AB0000000000000000000053 /* RoutineTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTemplate.swift; sourceTree = "<group>"; };
+		AB0000000000000000000054 /* RoutineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineEntry.swift; sourceTree = "<group>"; };
+		AB0000000000000000000055 /* RoutineDaySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDaySummary.swift; sourceTree = "<group>"; };
+		AB0000000000000000000056 /* NutritionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000057 /* RoutineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000058 /* NutritionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000059 /* NutritionQuickLogCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionQuickLogCardView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000060 /* NutritionLogEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionLogEditorView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000061 /* RoutineStatusCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineStatusCardView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000062 /* NutritionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionRepositoryTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000063 /* RoutineRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +216,7 @@
 				children = (
 					AC0000000000000000000009 /* Shared */,
 					AC0000000000000000000010 /* Home */,
+					AC0000000000000000000027 /* Nutrition */,
 					AC0000000000000000000022 /* Dashboard */,
 					AC0000000000000000000025 /* Health */,
 					AC0000000000000000000017 /* Onboarding */,
@@ -249,11 +276,12 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		AC0000000000000000000011 /* Routines */ = {
+			AC0000000000000000000011 /* Routines */ = {
 			isa = PBXGroup;
 			children = (
 				AB0000000000000000000020 /* RoutinesViewModel.swift */,
 				AB0000000000000000000021 /* RoutinesView.swift */,
+				AC0000000000000000000030 /* Views */,
 			);
 			path = Routines;
 			sourceTree = "<group>";
@@ -289,6 +317,11 @@
 				children = (
 					AB0000000000000000000027 /* UserProfile.swift */,
 					AB0000000000000000000044 /* DailyMetrics.swift */,
+					AB0000000000000000000051 /* NutritionLog.swift */,
+					AB0000000000000000000052 /* NutritionDaySummary.swift */,
+					AB0000000000000000000053 /* RoutineTemplate.swift */,
+					AB0000000000000000000054 /* RoutineEntry.swift */,
+					AB0000000000000000000055 /* RoutineDaySummary.swift */,
 				);
 				path = Models;
 				sourceTree = "<group>";
@@ -297,6 +330,8 @@
 				isa = PBXGroup;
 				children = (
 					AB0000000000000000000043 /* MetricsRepository.swift */,
+					AB0000000000000000000056 /* NutritionRepository.swift */,
+					AB0000000000000000000057 /* RoutineRepository.swift */,
 					AB0000000000000000000028 /* UserRepository.swift */,
 					AB0000000000000000000029 /* LocalUserRepository.swift */,
 				);
@@ -341,6 +376,8 @@
 					AB0000000000000000000040 /* LocalUserRepositoryTests.swift */,
 					AB0000000000000000000041 /* AppRouterTests.swift */,
 					AB0000000000000000000050 /* MetricsRepositoryTests.swift */,
+					AB0000000000000000000062 /* NutritionRepositoryTests.swift */,
+					AB0000000000000000000063 /* RoutineRepositoryTests.swift */,
 				);
 				path = GlowAppTests;
 				sourceTree = "<group>";
@@ -391,6 +428,40 @@
 				isa = PBXGroup;
 				children = (
 					AB0000000000000000000049 /* HealthConnectionCardView.swift */,
+				);
+				path = Views;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000027 /* Nutrition */ = {
+				isa = PBXGroup;
+				children = (
+					AC0000000000000000000028 /* Views */,
+					AC0000000000000000000029 /* ViewModels */,
+				);
+				path = Nutrition;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000028 /* Views */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000059 /* NutritionQuickLogCardView.swift */,
+					AB0000000000000000000060 /* NutritionLogEditorView.swift */,
+				);
+				path = Views;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000029 /* ViewModels */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000058 /* NutritionViewModel.swift */,
+				);
+				path = ViewModels;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000030 /* Views */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000061 /* RoutineStatusCardView.swift */,
 				);
 				path = Views;
 				sourceTree = "<group>";
@@ -519,8 +590,15 @@
 					AA0000000000000000000025 /* SettingsView.swift in Sources */,
 					AA0000000000000000000026 /* UserProfile.swift in Sources */,
 					AA0000000000000000000042 /* DailyMetrics.swift in Sources */,
+					AA0000000000000000000049 /* NutritionLog.swift in Sources */,
+					AA0000000000000000000050 /* NutritionDaySummary.swift in Sources */,
+					AA0000000000000000000051 /* RoutineTemplate.swift in Sources */,
+					AA0000000000000000000052 /* RoutineEntry.swift in Sources */,
+					AA0000000000000000000053 /* RoutineDaySummary.swift in Sources */,
 					AA0000000000000000000027 /* UserRepository.swift in Sources */,
 					AA0000000000000000000041 /* MetricsRepository.swift in Sources */,
+					AA0000000000000000000054 /* NutritionRepository.swift in Sources */,
+					AA0000000000000000000055 /* RoutineRepository.swift in Sources */,
 					AA0000000000000000000028 /* LocalUserRepository.swift in Sources */,
 					AA0000000000000000000043 /* DayBoundary.swift in Sources */,
 					AA0000000000000000000029 /* OnboardingViewModel.swift in Sources */,
@@ -535,6 +613,10 @@
 					AA0000000000000000000045 /* DashboardView.swift in Sources */,
 					AA0000000000000000000046 /* DashboardMetricCardView.swift in Sources */,
 					AA0000000000000000000047 /* HealthConnectionCardView.swift in Sources */,
+					AA0000000000000000000056 /* NutritionViewModel.swift in Sources */,
+					AA0000000000000000000057 /* NutritionQuickLogCardView.swift in Sources */,
+					AA0000000000000000000058 /* NutritionLogEditorView.swift in Sources */,
+					AA0000000000000000000059 /* RoutineStatusCardView.swift in Sources */,
 				);
 				runOnlyForDeploymentPostprocessing = 0;
 			};
@@ -546,6 +628,8 @@
 					AA0000000000000000000038 /* LocalUserRepositoryTests.swift in Sources */,
 					AA0000000000000000000039 /* AppRouterTests.swift in Sources */,
 					AA0000000000000000000048 /* MetricsRepositoryTests.swift in Sources */,
+					AA0000000000000000000060 /* NutritionRepositoryTests.swift in Sources */,
+					AA0000000000000000000061 /* RoutineRepositoryTests.swift in Sources */,
 				);
 				runOnlyForDeploymentPostprocessing = 0;
 			};

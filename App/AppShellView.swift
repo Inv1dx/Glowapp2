@@ -30,7 +30,11 @@ struct AppShellView: View {
     private func contentView(for tab: AppTab) -> some View {
         switch tab {
         case .home:
-            HomeView(viewModel: environment.makeHomeViewModel())
+            HomeView(
+                dashboardViewModel: environment.makeHomeViewModel(),
+                nutritionViewModel: environment.makeNutritionViewModel(),
+                routinesViewModel: environment.makeRoutinesViewModel()
+            )
         case .routines:
             RoutinesView(viewModel: environment.makeRoutinesViewModel())
         case .progress:

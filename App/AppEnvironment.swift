@@ -5,6 +5,8 @@ final class AppEnvironment {
     let authService: any AuthService
     let healthKitService: any HealthKitService
     let metricsRepository: any MetricsRepository
+    let nutritionRepository: any NutritionRepository
+    let routineRepository: any RoutineRepository
     let supabaseService: any SupabaseService
     let subscriptionService: any SubscriptionService
     let analyticsService: any AnalyticsService
@@ -14,6 +16,8 @@ final class AppEnvironment {
         authService: any AuthService = StubAuthService(),
         healthKitService: any HealthKitService = LiveHealthKitService(),
         metricsRepository: (any MetricsRepository)? = nil,
+        nutritionRepository: (any NutritionRepository)? = nil,
+        routineRepository: (any RoutineRepository)? = nil,
         supabaseService: any SupabaseService = StubSupabaseService(),
         subscriptionService: any SubscriptionService = StubSubscriptionService(),
         analyticsService: any AnalyticsService = StubAnalyticsService()
@@ -24,6 +28,8 @@ final class AppEnvironment {
         self.metricsRepository = metricsRepository ?? LocalMetricsRepository(
             healthKitService: healthKitService
         )
+        self.nutritionRepository = nutritionRepository ?? LocalNutritionRepository()
+        self.routineRepository = routineRepository ?? LocalRoutineRepository()
         self.supabaseService = supabaseService
         self.subscriptionService = subscriptionService
         self.analyticsService = analyticsService
@@ -44,8 +50,14 @@ final class AppEnvironment {
         HomeViewModel(metricsRepository: metricsRepository)
     }
 
+    @MainActor
+    func makeNutritionViewModel() -> NutritionViewModel {
+        NutritionViewModel(nutritionRepository: nutritionRepository)
+    }
+
+    @MainActor
     func makeRoutinesViewModel() -> RoutinesViewModel {
-        RoutinesViewModel()
+        RoutinesViewModel(routineRepository: routineRepository)
     }
 
     func makeProgressViewModel() -> ProgressViewModel {
@@ -70,7 +82,9 @@ extension AppEnvironment {
             metricsRepository: LocalMetricsRepository(
                 healthKitService: healthKitService,
                 userDefaults: userDefaults
-            )
+            ),
+            nutritionRepository: LocalNutritionRepository(userDefaults: userDefaults),
+            routineRepository: LocalRoutineRepository(userDefaults: userDefaults)
         )
     }()
 }

@@ -40,13 +40,13 @@ final class DashboardViewModel: ObservableObject {
     var subtitle: String {
         switch snapshot.connectionState {
         case .unavailable:
-            "Apple Health is not available on this device."
+            "Apple Health is not available on this device. Manual logging still works below."
         case .notConnected:
-            "Connect Apple Health to pull in today's movement, sleep, and weight data."
+            "Connect Apple Health to pull in today's movement, sleep, and weight data. Nutrition, water, and routines stay manual."
         case .connected:
-            "Keep the dashboard practical. Read the basics, then move on with your day."
+            "Keep the dashboard practical. Read the basics, log the manual pieces, then move on with your day."
         case .needsAttention:
-            "Glow could not read all of your Apple Health data yet."
+            "Glow could not read all of your Apple Health data yet. Manual logging still stays available."
         }
     }
 
@@ -192,7 +192,9 @@ final class DashboardViewModel: ObservableObject {
     }
 
     func loadIfNeeded() async {
-        guard !hasLoadedOnce else {
+        if hasLoadedOnce,
+           let metricsDate = snapshot.metrics?.date,
+           DayBoundaryFactory.isSameDay(metricsDate, Date()) {
             return
         }
 
