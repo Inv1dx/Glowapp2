@@ -75,6 +75,14 @@
 		AA0000000000000000000066 /* GlowScoreSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000068 /* GlowScoreSectionView.swift */; };
 		AA0000000000000000000067 /* GlowScoreEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000069 /* GlowScoreEngineTests.swift */; };
 		AA0000000000000000000068 /* GlowRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000070 /* GlowRepositoryTests.swift */; };
+		AA0000000000000000000071 /* GlowPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000071 /* GlowPlan.swift */; };
+		AA0000000000000000000072 /* GlowPlanEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000072 /* GlowPlanEngine.swift */; };
+		AA0000000000000000000073 /* GlowPlanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000073 /* GlowPlanRepository.swift */; };
+		AA0000000000000000000074 /* DailyPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000074 /* DailyPlanViewModel.swift */; };
+		AA0000000000000000000075 /* DailyPlanSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000075 /* DailyPlanSectionView.swift */; };
+		AA0000000000000000000076 /* GlowPlanEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000076 /* GlowPlanEngineTests.swift */; };
+		AA0000000000000000000077 /* GlowPlanRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000077 /* GlowPlanRepositoryTests.swift */; };
+		AA0000000000000000000078 /* DailyPlanViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000078 /* DailyPlanViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +166,14 @@
 		AB0000000000000000000068 /* GlowScoreSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreSectionView.swift; sourceTree = "<group>"; };
 		AB0000000000000000000069 /* GlowScoreEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreEngineTests.swift; sourceTree = "<group>"; };
 		AB0000000000000000000070 /* GlowRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowRepositoryTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000071 /* GlowPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowPlan.swift; sourceTree = "<group>"; };
+		AB0000000000000000000072 /* GlowPlanEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowPlanEngine.swift; sourceTree = "<group>"; };
+		AB0000000000000000000073 /* GlowPlanRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowPlanRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000074 /* DailyPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPlanViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000075 /* DailyPlanSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPlanSectionView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000076 /* GlowPlanEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowPlanEngineTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000077 /* GlowPlanRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowPlanRepositoryTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000078 /* DailyPlanViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPlanViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +249,7 @@
 				AC0000000000000000000027 /* Nutrition */,
 				AC0000000000000000000022 /* Dashboard */,
 				AC0000000000000000000031 /* GlowScore */,
+				AC0000000000000000000034 /* DailyPlan */,
 				AC0000000000000000000025 /* Health */,
 				AC0000000000000000000017 /* Onboarding */,
 				AC0000000000000000000011 /* Routines */,
@@ -262,6 +279,7 @@
 				AB0000000000000000000015 /* SubscriptionService.swift */,
 				AB0000000000000000000016 /* AnalyticsService.swift */,
 				AB0000000000000000000065 /* GlowScoreEngine.swift */,
+				AB0000000000000000000072 /* GlowPlanEngine.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -339,6 +357,7 @@
 					AB0000000000000000000054 /* RoutineEntry.swift */,
 					AB0000000000000000000055 /* RoutineDaySummary.swift */,
 					AB0000000000000000000064 /* GlowScore.swift */,
+					AB0000000000000000000071 /* GlowPlan.swift */,
 				);
 				path = Models;
 				sourceTree = "<group>";
@@ -350,6 +369,7 @@
 					AB0000000000000000000056 /* NutritionRepository.swift */,
 					AB0000000000000000000057 /* RoutineRepository.swift */,
 					AB0000000000000000000066 /* GlowRepository.swift */,
+					AB0000000000000000000073 /* GlowPlanRepository.swift */,
 					AB0000000000000000000028 /* UserRepository.swift */,
 					AB0000000000000000000029 /* LocalUserRepository.swift */,
 				);
@@ -398,6 +418,9 @@
 					AB0000000000000000000063 /* RoutineRepositoryTests.swift */,
 					AB0000000000000000000069 /* GlowScoreEngineTests.swift */,
 					AB0000000000000000000070 /* GlowRepositoryTests.swift */,
+					AB0000000000000000000076 /* GlowPlanEngineTests.swift */,
+					AB0000000000000000000077 /* GlowPlanRepositoryTests.swift */,
+					AB0000000000000000000078 /* DailyPlanViewModelTests.swift */,
 				);
 				path = GlowAppTests;
 				sourceTree = "<group>";
@@ -499,6 +522,31 @@
 				isa = PBXGroup;
 				children = (
 					AB0000000000000000000067 /* GlowScoreViewModel.swift */,
+				);
+				path = ViewModels;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000034 /* DailyPlan */ = {
+				isa = PBXGroup;
+				children = (
+					AC0000000000000000000035 /* Views */,
+					AC0000000000000000000036 /* ViewModels */,
+				);
+				path = DailyPlan;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000035 /* Views */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000075 /* DailyPlanSectionView.swift */,
+				);
+				path = Views;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000036 /* ViewModels */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000074 /* DailyPlanViewModel.swift */,
 				);
 				path = ViewModels;
 				sourceTree = "<group>";
@@ -624,6 +672,7 @@
 				AA0000000000000000000014 /* SupabaseService.swift in Sources */,
 				AA0000000000000000000015 /* SubscriptionService.swift in Sources */,
 				AA0000000000000000000016 /* AnalyticsService.swift in Sources */,
+				AA0000000000000000000072 /* GlowPlanEngine.swift in Sources */,
 				AA0000000000000000000017 /* FeaturePlaceholderView.swift in Sources */,
 				AA0000000000000000000018 /* HomeViewModel.swift in Sources */,
 				AA0000000000000000000019 /* HomeView.swift in Sources */,
@@ -640,10 +689,12 @@
 					AA0000000000000000000051 /* RoutineTemplate.swift in Sources */,
 					AA0000000000000000000052 /* RoutineEntry.swift in Sources */,
 					AA0000000000000000000053 /* RoutineDaySummary.swift in Sources */,
+					AA0000000000000000000071 /* GlowPlan.swift in Sources */,
 					AA0000000000000000000027 /* UserRepository.swift in Sources */,
 					AA0000000000000000000041 /* MetricsRepository.swift in Sources */,
 					AA0000000000000000000054 /* NutritionRepository.swift in Sources */,
 					AA0000000000000000000055 /* RoutineRepository.swift in Sources */,
+					AA0000000000000000000073 /* GlowPlanRepository.swift in Sources */,
 					AA0000000000000000000028 /* LocalUserRepository.swift in Sources */,
 					AA0000000000000000000043 /* DayBoundary.swift in Sources */,
 					AA0000000000000000000029 /* OnboardingViewModel.swift in Sources */,
@@ -667,6 +718,8 @@
 					AA0000000000000000000064 /* GlowRepository.swift in Sources */,
 					AA0000000000000000000065 /* GlowScoreViewModel.swift in Sources */,
 					AA0000000000000000000066 /* GlowScoreSectionView.swift in Sources */,
+					AA0000000000000000000074 /* DailyPlanViewModel.swift in Sources */,
+					AA0000000000000000000075 /* DailyPlanSectionView.swift in Sources */,
 				);
 				runOnlyForDeploymentPostprocessing = 0;
 			};
@@ -682,6 +735,9 @@
 					AA0000000000000000000061 /* RoutineRepositoryTests.swift in Sources */,
 					AA0000000000000000000067 /* GlowScoreEngineTests.swift in Sources */,
 					AA0000000000000000000068 /* GlowRepositoryTests.swift in Sources */,
+					AA0000000000000000000076 /* GlowPlanEngineTests.swift in Sources */,
+					AA0000000000000000000077 /* GlowPlanRepositoryTests.swift in Sources */,
+					AA0000000000000000000078 /* DailyPlanViewModelTests.swift in Sources */,
 				);
 				runOnlyForDeploymentPostprocessing = 0;
 			};

@@ -5,6 +5,7 @@ struct DashboardView: View {
     @ObservedObject var nutritionViewModel: NutritionViewModel
     @ObservedObject var routinesViewModel: RoutinesViewModel
     @ObservedObject var glowScoreViewModel: GlowScoreViewModel
+    @ObservedObject var dailyPlanViewModel: DailyPlanViewModel
     let onRefresh: () async -> Void
     let onOpenSettings: () -> Void
 
@@ -18,6 +19,7 @@ struct DashboardView: View {
             VStack(alignment: .leading, spacing: GlowSpacing.large) {
                 header
                 GlowScoreSectionView(viewModel: glowScoreViewModel)
+                DailyPlanSectionView(viewModel: dailyPlanViewModel)
                 healthSection
                 manualMetricsSection
                 NutritionQuickLogCardView(viewModel: nutritionViewModel)

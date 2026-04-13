@@ -8,17 +8,20 @@ struct HomeView: View {
     @StateObject private var nutritionViewModel: NutritionViewModel
     @StateObject private var routinesViewModel: RoutinesViewModel
     @StateObject private var glowScoreViewModel: GlowScoreViewModel
+    @StateObject private var dailyPlanViewModel: DailyPlanViewModel
 
     init(
         dashboardViewModel: HomeViewModel,
         nutritionViewModel: NutritionViewModel,
         routinesViewModel: RoutinesViewModel,
-        glowScoreViewModel: GlowScoreViewModel
+        glowScoreViewModel: GlowScoreViewModel,
+        dailyPlanViewModel: DailyPlanViewModel
     ) {
         _dashboardViewModel = StateObject(wrappedValue: dashboardViewModel)
         _nutritionViewModel = StateObject(wrappedValue: nutritionViewModel)
         _routinesViewModel = StateObject(wrappedValue: routinesViewModel)
         _glowScoreViewModel = StateObject(wrappedValue: glowScoreViewModel)
+        _dailyPlanViewModel = StateObject(wrappedValue: dailyPlanViewModel)
     }
 
     var body: some View {
@@ -27,27 +30,29 @@ struct HomeView: View {
             nutritionViewModel: nutritionViewModel,
             routinesViewModel: routinesViewModel,
             glowScoreViewModel: glowScoreViewModel,
+            dailyPlanViewModel: dailyPlanViewModel,
             onRefresh: refreshAllContent,
             onOpenSettings: openSettings
         )
         .navigationTitle(dashboardViewModel.navigationTitle)
         .task {
             await glowScoreViewModel.loadStoredScore()
+            await dailyPlanViewModel.loadStoredPlan()
             await loadInitialContent()
         }
         .onReceive(dashboardViewModel.$snapshot.dropFirst()) { _ in
             Task {
-                await refreshGlowScoreIfReady()
+                await refreshDerivedContentIfReady()
             }
         }
         .onReceive(nutritionViewModel.$summary.dropFirst()) { _ in
             Task {
-                await refreshGlowScoreIfReady()
+                await refreshDerivedContentIfReady()
             }
         }
         .onReceive(routinesViewModel.$summary.dropFirst()) { _ in
             Task {
-                await refreshGlowScoreIfReady()
+                await refreshDerivedContentIfReady()
             }
         }
     }
@@ -64,17 +69,17 @@ struct HomeView: View {
         await dashboardViewModel.loadIfNeeded()
         await nutritionViewModel.loadIfNeeded()
         await routinesViewModel.loadIfNeeded()
-        await refreshGlowScoreIfReady()
+        await refreshDerivedContentIfReady()
     }
 
     private func refreshAllContent() async {
         await dashboardViewModel.refresh()
         await nutritionViewModel.refresh()
         await routinesViewModel.refresh()
-        await refreshGlowScoreIfReady()
+        await refreshDerivedContentIfReady()
     }
 
-    private func refreshGlowScoreIfReady() async {
+    private func refreshDerivedContentIfReady() async {
         guard
             dashboardViewModel.hasLoadedOnce,
             nutritionViewModel.hasLoadedOnce,
@@ -87,6 +92,17 @@ struct HomeView: View {
             metricsSnapshot: dashboardViewModel.snapshot,
             nutritionSummary: nutritionViewModel.summary,
             routineSummary: routinesViewModel.summary
+        )
+
+        guard let score = glowScoreViewModel.score else {
+            return
+        }
+
+        await dailyPlanViewModel.refreshIfNeeded(
+            metricsSnapshot: dashboardViewModel.snapshot,
+            nutritionSummary: nutritionViewModel.summary,
+            routineSummary: routinesViewModel.summary,
+            glowScore: score
         )
     }
 }

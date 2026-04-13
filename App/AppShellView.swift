@@ -34,7 +34,8 @@ struct AppShellView: View {
                 dashboardViewModel: environment.makeHomeViewModel(),
                 nutritionViewModel: environment.makeNutritionViewModel(),
                 routinesViewModel: environment.makeRoutinesViewModel(),
-                glowScoreViewModel: environment.makeGlowScoreViewModel()
+                glowScoreViewModel: environment.makeGlowScoreViewModel(),
+                dailyPlanViewModel: environment.makeDailyPlanViewModel()
             )
         case .routines:
             RoutinesView(viewModel: environment.makeRoutinesViewModel())

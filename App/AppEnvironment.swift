@@ -8,6 +8,7 @@ final class AppEnvironment {
     let nutritionRepository: any NutritionRepository
     let routineRepository: any RoutineRepository
     let glowRepository: any GlowRepository
+    let glowPlanRepository: any GlowPlanRepository
     let supabaseService: any SupabaseService
     let subscriptionService: any SubscriptionService
     let analyticsService: any AnalyticsService
@@ -20,6 +21,7 @@ final class AppEnvironment {
         nutritionRepository: (any NutritionRepository)? = nil,
         routineRepository: (any RoutineRepository)? = nil,
         glowRepository: (any GlowRepository)? = nil,
+        glowPlanRepository: (any GlowPlanRepository)? = nil,
         supabaseService: any SupabaseService = StubSupabaseService(),
         subscriptionService: any SubscriptionService = StubSubscriptionService(),
         analyticsService: any AnalyticsService = StubAnalyticsService()
@@ -33,6 +35,7 @@ final class AppEnvironment {
         self.nutritionRepository = nutritionRepository ?? LocalNutritionRepository()
         self.routineRepository = routineRepository ?? LocalRoutineRepository()
         self.glowRepository = glowRepository ?? LocalGlowRepository()
+        self.glowPlanRepository = glowPlanRepository ?? LocalGlowPlanRepository()
         self.supabaseService = supabaseService
         self.subscriptionService = subscriptionService
         self.analyticsService = analyticsService
@@ -71,6 +74,14 @@ final class AppEnvironment {
         )
     }
 
+    @MainActor
+    func makeDailyPlanViewModel() -> DailyPlanViewModel {
+        DailyPlanViewModel(
+            userRepository: userRepository,
+            planRepository: glowPlanRepository
+        )
+    }
+
     func makeProgressViewModel() -> ProgressViewModel {
         ProgressViewModel()
     }
@@ -96,7 +107,8 @@ extension AppEnvironment {
             ),
             nutritionRepository: LocalNutritionRepository(userDefaults: userDefaults),
             routineRepository: LocalRoutineRepository(userDefaults: userDefaults),
-            glowRepository: LocalGlowRepository(userDefaults: userDefaults)
+            glowRepository: LocalGlowRepository(userDefaults: userDefaults),
+            glowPlanRepository: LocalGlowPlanRepository(userDefaults: userDefaults)
         )
     }()
 }
