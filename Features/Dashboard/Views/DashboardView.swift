@@ -6,6 +6,7 @@ struct DashboardView: View {
     @ObservedObject var routinesViewModel: RoutinesViewModel
     @ObservedObject var glowScoreViewModel: GlowScoreViewModel
     @ObservedObject var dailyPlanViewModel: DailyPlanViewModel
+    @ObservedObject var recapViewModel: RecapViewModel
     let onRefresh: () async -> Void
     let onOpenSettings: () -> Void
 
@@ -20,6 +21,7 @@ struct DashboardView: View {
                 header
                 GlowScoreSectionView(viewModel: glowScoreViewModel)
                 DailyPlanSectionView(viewModel: dailyPlanViewModel)
+                recapEntry
                 healthSection
                 manualMetricsSection
                 NutritionQuickLogCardView(viewModel: nutritionViewModel)
@@ -76,6 +78,15 @@ struct DashboardView: View {
                 }
             }
         }
+    }
+
+    private var recapEntry: some View {
+        NavigationLink {
+            RecapView(viewModel: recapViewModel)
+        } label: {
+            RecapEntryCardView(viewModel: recapViewModel)
+        }
+        .buttonStyle(.plain)
     }
 
     private var manualMetricsSection: some View {

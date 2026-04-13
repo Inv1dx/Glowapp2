@@ -82,6 +82,11 @@ final class AppEnvironment {
         )
     }
 
+    @MainActor
+    func makeRecapViewModel() -> RecapViewModel {
+        RecapViewModel(userRepository: userRepository)
+    }
+
     func makeProgressViewModel() -> ProgressViewModel {
         ProgressViewModel()
     }

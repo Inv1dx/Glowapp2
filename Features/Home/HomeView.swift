@@ -9,19 +9,22 @@ struct HomeView: View {
     @StateObject private var routinesViewModel: RoutinesViewModel
     @StateObject private var glowScoreViewModel: GlowScoreViewModel
     @StateObject private var dailyPlanViewModel: DailyPlanViewModel
+    @StateObject private var recapViewModel: RecapViewModel
 
     init(
         dashboardViewModel: HomeViewModel,
         nutritionViewModel: NutritionViewModel,
         routinesViewModel: RoutinesViewModel,
         glowScoreViewModel: GlowScoreViewModel,
-        dailyPlanViewModel: DailyPlanViewModel
+        dailyPlanViewModel: DailyPlanViewModel,
+        recapViewModel: RecapViewModel
     ) {
         _dashboardViewModel = StateObject(wrappedValue: dashboardViewModel)
         _nutritionViewModel = StateObject(wrappedValue: nutritionViewModel)
         _routinesViewModel = StateObject(wrappedValue: routinesViewModel)
         _glowScoreViewModel = StateObject(wrappedValue: glowScoreViewModel)
         _dailyPlanViewModel = StateObject(wrappedValue: dailyPlanViewModel)
+        _recapViewModel = StateObject(wrappedValue: recapViewModel)
     }
 
     var body: some View {
@@ -31,6 +34,7 @@ struct HomeView: View {
             routinesViewModel: routinesViewModel,
             glowScoreViewModel: glowScoreViewModel,
             dailyPlanViewModel: dailyPlanViewModel,
+            recapViewModel: recapViewModel,
             onRefresh: refreshAllContent,
             onOpenSettings: openSettings
         )
@@ -92,6 +96,13 @@ struct HomeView: View {
             metricsSnapshot: dashboardViewModel.snapshot,
             nutritionSummary: nutritionViewModel.summary,
             routineSummary: routinesViewModel.summary
+        )
+
+        await recapViewModel.refresh(
+            metricsSnapshot: dashboardViewModel.snapshot,
+            nutritionSummary: nutritionViewModel.summary,
+            routineSummary: routinesViewModel.summary,
+            glowScore: glowScoreViewModel.score
         )
 
         guard let score = glowScoreViewModel.score else {
