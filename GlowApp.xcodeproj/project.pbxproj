@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0000000000000000000001 /* GlowAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000001 /* GlowAppApp.swift */; };
+		AA0000000000000000000002 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000002 /* AppRouter.swift */; };
+		AA0000000000000000000003 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000003 /* AppEnvironment.swift */; };
+		AA0000000000000000000004 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000004 /* AppRootView.swift */; };
+		AA0000000000000000000005 /* AppTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000005 /* AppTab.swift */; };
+		AA0000000000000000000006 /* AppShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000006 /* AppShellView.swift */; };
+		AA0000000000000000000007 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000007 /* Colors.swift */; };
+		AA0000000000000000000008 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000008 /* Typography.swift */; };
+		AA0000000000000000000009 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000009 /* Spacing.swift */; };
+		AA0000000000000000000010 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000010 /* PrimaryButton.swift */; };
+		AA0000000000000000000011 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000011 /* Constants.swift */; };
+		AA0000000000000000000012 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000012 /* AuthService.swift */; };
+		AA0000000000000000000013 /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000013 /* HealthKitService.swift */; };
+		AA0000000000000000000014 /* SupabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000014 /* SupabaseService.swift */; };
+		AA0000000000000000000015 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000015 /* SubscriptionService.swift */; };
+		AA0000000000000000000016 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000016 /* AnalyticsService.swift */; };
+		AA0000000000000000000017 /* FeaturePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000017 /* FeaturePlaceholderView.swift */; };
+		AA0000000000000000000018 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000018 /* HomeViewModel.swift */; };
+		AA0000000000000000000019 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000019 /* HomeView.swift */; };
+		AA0000000000000000000020 /* RoutinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000020 /* RoutinesViewModel.swift */; };
+		AA0000000000000000000021 /* RoutinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000021 /* RoutinesView.swift */; };
+		AA0000000000000000000022 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000022 /* ProgressViewModel.swift */; };
+		AA0000000000000000000023 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000023 /* ProgressView.swift */; };
+		AA0000000000000000000024 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000024 /* SettingsViewModel.swift */; };
+		AA0000000000000000000025 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000025 /* SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB0000000000000000000001 /* GlowAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowAppApp.swift; sourceTree = "<group>"; };
+		AB0000000000000000000002 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		AB0000000000000000000003 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		AB0000000000000000000004 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000005 /* AppTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTab.swift; sourceTree = "<group>"; };
+		AB0000000000000000000006 /* AppShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShellView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000007 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AB0000000000000000000008 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		AB0000000000000000000009 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		AB0000000000000000000010 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		AB0000000000000000000011 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AB0000000000000000000012 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		AB0000000000000000000013 /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
+		AB0000000000000000000014 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
+		AB0000000000000000000015 /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
+		AB0000000000000000000016 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		AB0000000000000000000017 /* FeaturePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturePlaceholderView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000018 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000019 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000020 /* RoutinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000021 /* RoutinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000022 /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000023 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000024 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000025 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000026 /* GlowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD0000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC0000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				AC0000000000000000000003 /* App */,
+				AC0000000000000000000004 /* Core */,
+				AC0000000000000000000005 /* Features */,
+				AC0000000000000000000002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000026 /* GlowApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000001 /* GlowAppApp.swift */,
+				AB0000000000000000000002 /* AppRouter.swift */,
+				AB0000000000000000000003 /* AppEnvironment.swift */,
+				AB0000000000000000000004 /* AppRootView.swift */,
+				AB0000000000000000000005 /* AppTab.swift */,
+				AB0000000000000000000006 /* AppShellView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000004 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AC0000000000000000000006 /* DesignSystem */,
+				AC0000000000000000000007 /* Services */,
+				AC0000000000000000000008 /* Utilities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000005 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AC0000000000000000000009 /* Shared */,
+				AC0000000000000000000010 /* Home */,
+				AC0000000000000000000011 /* Routines */,
+				AC0000000000000000000012 /* Progress */,
+				AC0000000000000000000013 /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000006 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000007 /* Colors.swift */,
+				AB0000000000000000000008 /* Typography.swift */,
+				AB0000000000000000000009 /* Spacing.swift */,
+				AC0000000000000000000014 /* Components */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000007 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000012 /* AuthService.swift */,
+				AB0000000000000000000013 /* HealthKitService.swift */,
+				AB0000000000000000000014 /* SupabaseService.swift */,
+				AB0000000000000000000015 /* SubscriptionService.swift */,
+				AB0000000000000000000016 /* AnalyticsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000008 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000011 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000009 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000017 /* FeaturePlaceholderView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000010 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000018 /* HomeViewModel.swift */,
+				AB0000000000000000000019 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000011 /* Routines */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000020 /* RoutinesViewModel.swift */,
+				AB0000000000000000000021 /* RoutinesView.swift */,
+			);
+			path = Routines;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000012 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000022 /* ProgressViewModel.swift */,
+				AB0000000000000000000023 /* ProgressView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000013 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000024 /* SettingsViewModel.swift */,
+				AB0000000000000000000025 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AC0000000000000000000014 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000010 /* PrimaryButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE0000000000000000000001 /* GlowApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB0000000000000000000002 /* Build configuration list for PBXNativeTarget "GlowApp" */;
+			buildPhases = (
+				AD0000000000000000000001 /* Sources */,
+				AD0000000000000000000002 /* Frameworks */,
+				AD0000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlowApp;
+			productName = GlowApp;
+			productReference = AB0000000000000000000026 /* GlowApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					AE0000000000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = BB0000000000000000000001 /* Build configuration list for PBXProject "GlowApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC0000000000000000000001;
+			productRefGroup = AC0000000000000000000002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE0000000000000000000001 /* GlowApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD0000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD0000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000001 /* GlowAppApp.swift in Sources */,
+				AA0000000000000000000002 /* AppRouter.swift in Sources */,
+				AA0000000000000000000003 /* AppEnvironment.swift in Sources */,
+				AA0000000000000000000004 /* AppRootView.swift in Sources */,
+				AA0000000000000000000005 /* AppTab.swift in Sources */,
+				AA0000000000000000000006 /* AppShellView.swift in Sources */,
+				AA0000000000000000000007 /* Colors.swift in Sources */,
+				AA0000000000000000000008 /* Typography.swift in Sources */,
+				AA0000000000000000000009 /* Spacing.swift in Sources */,
+				AA0000000000000000000010 /* PrimaryButton.swift in Sources */,
+				AA0000000000000000000011 /* Constants.swift in Sources */,
+				AA0000000000000000000012 /* AuthService.swift in Sources */,
+				AA0000000000000000000013 /* HealthKitService.swift in Sources */,
+				AA0000000000000000000014 /* SupabaseService.swift in Sources */,
+				AA0000000000000000000015 /* SubscriptionService.swift in Sources */,
+				AA0000000000000000000016 /* AnalyticsService.swift in Sources */,
+				AA0000000000000000000017 /* FeaturePlaceholderView.swift in Sources */,
+				AA0000000000000000000018 /* HomeViewModel.swift in Sources */,
+				AA0000000000000000000019 /* HomeView.swift in Sources */,
+				AA0000000000000000000020 /* RoutinesViewModel.swift in Sources */,
+				AA0000000000000000000021 /* RoutinesView.swift in Sources */,
+				AA0000000000000000000022 /* ProgressViewModel.swift in Sources */,
+				AA0000000000000000000023 /* ProgressView.swift in Sources */,
+				AA0000000000000000000024 /* SettingsViewModel.swift in Sources */,
+				AA0000000000000000000025 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BA0000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BA0000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BA0000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Glow App";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GlowApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BA0000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Glow App";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GlowApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB0000000000000000000001 /* Build configuration list for PBXProject "GlowApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA0000000000000000000001 /* Debug */,
+				BA0000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB0000000000000000000002 /* Build configuration list for PBXNativeTarget "GlowApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA0000000000000000000003 /* Debug */,
+				BA0000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF0000000000000000000001 /* Project object */;
+}
