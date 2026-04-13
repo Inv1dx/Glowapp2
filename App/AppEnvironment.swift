@@ -7,6 +7,7 @@ final class AppEnvironment {
     let metricsRepository: any MetricsRepository
     let nutritionRepository: any NutritionRepository
     let routineRepository: any RoutineRepository
+    let glowRepository: any GlowRepository
     let supabaseService: any SupabaseService
     let subscriptionService: any SubscriptionService
     let analyticsService: any AnalyticsService
@@ -18,6 +19,7 @@ final class AppEnvironment {
         metricsRepository: (any MetricsRepository)? = nil,
         nutritionRepository: (any NutritionRepository)? = nil,
         routineRepository: (any RoutineRepository)? = nil,
+        glowRepository: (any GlowRepository)? = nil,
         supabaseService: any SupabaseService = StubSupabaseService(),
         subscriptionService: any SubscriptionService = StubSubscriptionService(),
         analyticsService: any AnalyticsService = StubAnalyticsService()
@@ -30,6 +32,7 @@ final class AppEnvironment {
         )
         self.nutritionRepository = nutritionRepository ?? LocalNutritionRepository()
         self.routineRepository = routineRepository ?? LocalRoutineRepository()
+        self.glowRepository = glowRepository ?? LocalGlowRepository()
         self.supabaseService = supabaseService
         self.subscriptionService = subscriptionService
         self.analyticsService = analyticsService
@@ -60,6 +63,14 @@ final class AppEnvironment {
         RoutinesViewModel(routineRepository: routineRepository)
     }
 
+    @MainActor
+    func makeGlowScoreViewModel() -> GlowScoreViewModel {
+        GlowScoreViewModel(
+            userRepository: userRepository,
+            glowRepository: glowRepository
+        )
+    }
+
     func makeProgressViewModel() -> ProgressViewModel {
         ProgressViewModel()
     }
@@ -84,7 +95,8 @@ extension AppEnvironment {
                 userDefaults: userDefaults
             ),
             nutritionRepository: LocalNutritionRepository(userDefaults: userDefaults),
-            routineRepository: LocalRoutineRepository(userDefaults: userDefaults)
+            routineRepository: LocalRoutineRepository(userDefaults: userDefaults),
+            glowRepository: LocalGlowRepository(userDefaults: userDefaults)
         )
     }()
 }

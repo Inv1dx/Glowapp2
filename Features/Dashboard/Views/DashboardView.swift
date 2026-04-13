@@ -4,6 +4,8 @@ struct DashboardView: View {
     @ObservedObject var dashboardViewModel: DashboardViewModel
     @ObservedObject var nutritionViewModel: NutritionViewModel
     @ObservedObject var routinesViewModel: RoutinesViewModel
+    @ObservedObject var glowScoreViewModel: GlowScoreViewModel
+    let onRefresh: () async -> Void
     let onOpenSettings: () -> Void
 
     private let columns = [
@@ -15,6 +17,7 @@ struct DashboardView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: GlowSpacing.large) {
                 header
+                GlowScoreSectionView(viewModel: glowScoreViewModel)
                 healthSection
                 manualMetricsSection
                 NutritionQuickLogCardView(viewModel: nutritionViewModel)
@@ -23,9 +26,7 @@ struct DashboardView: View {
         }
         .background(GlowColors.background.ignoresSafeArea())
         .refreshable {
-            await dashboardViewModel.refresh()
-            await nutritionViewModel.refresh()
-            await routinesViewModel.refresh()
+            await onRefresh()
         }
     }
 

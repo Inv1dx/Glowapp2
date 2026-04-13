@@ -68,6 +68,13 @@
 		AA0000000000000000000059 /* RoutineStatusCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000061 /* RoutineStatusCardView.swift */; };
 		AA0000000000000000000060 /* NutritionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000062 /* NutritionRepositoryTests.swift */; };
 		AA0000000000000000000061 /* RoutineRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000063 /* RoutineRepositoryTests.swift */; };
+		AA0000000000000000000062 /* GlowScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000064 /* GlowScore.swift */; };
+		AA0000000000000000000063 /* GlowScoreEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000065 /* GlowScoreEngine.swift */; };
+		AA0000000000000000000064 /* GlowRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000066 /* GlowRepository.swift */; };
+		AA0000000000000000000065 /* GlowScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000067 /* GlowScoreViewModel.swift */; };
+		AA0000000000000000000066 /* GlowScoreSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000068 /* GlowScoreSectionView.swift */; };
+		AA0000000000000000000067 /* GlowScoreEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000069 /* GlowScoreEngineTests.swift */; };
+		AA0000000000000000000068 /* GlowRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000070 /* GlowRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +151,13 @@
 		AB0000000000000000000061 /* RoutineStatusCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineStatusCardView.swift; sourceTree = "<group>"; };
 		AB0000000000000000000062 /* NutritionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionRepositoryTests.swift; sourceTree = "<group>"; };
 		AB0000000000000000000063 /* RoutineRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineRepositoryTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000064 /* GlowScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScore.swift; sourceTree = "<group>"; };
+		AB0000000000000000000065 /* GlowScoreEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreEngine.swift; sourceTree = "<group>"; };
+		AB0000000000000000000066 /* GlowRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000067 /* GlowScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000068 /* GlowScoreSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreSectionView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000069 /* GlowScoreEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreEngineTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000070 /* GlowRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,14 +228,15 @@
 			AC0000000000000000000005 /* Features */ = {
 				isa = PBXGroup;
 				children = (
-					AC0000000000000000000009 /* Shared */,
-					AC0000000000000000000010 /* Home */,
-					AC0000000000000000000027 /* Nutrition */,
-					AC0000000000000000000022 /* Dashboard */,
-					AC0000000000000000000025 /* Health */,
-					AC0000000000000000000017 /* Onboarding */,
-					AC0000000000000000000011 /* Routines */,
-					AC0000000000000000000012 /* Progress */,
+				AC0000000000000000000009 /* Shared */,
+				AC0000000000000000000010 /* Home */,
+				AC0000000000000000000027 /* Nutrition */,
+				AC0000000000000000000022 /* Dashboard */,
+				AC0000000000000000000031 /* GlowScore */,
+				AC0000000000000000000025 /* Health */,
+				AC0000000000000000000017 /* Onboarding */,
+				AC0000000000000000000011 /* Routines */,
+				AC0000000000000000000012 /* Progress */,
 				AC0000000000000000000013 /* Settings */,
 			);
 			path = Features;
@@ -246,6 +261,7 @@
 				AB0000000000000000000014 /* SupabaseService.swift */,
 				AB0000000000000000000015 /* SubscriptionService.swift */,
 				AB0000000000000000000016 /* AnalyticsService.swift */,
+				AB0000000000000000000065 /* GlowScoreEngine.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -322,6 +338,7 @@
 					AB0000000000000000000053 /* RoutineTemplate.swift */,
 					AB0000000000000000000054 /* RoutineEntry.swift */,
 					AB0000000000000000000055 /* RoutineDaySummary.swift */,
+					AB0000000000000000000064 /* GlowScore.swift */,
 				);
 				path = Models;
 				sourceTree = "<group>";
@@ -332,6 +349,7 @@
 					AB0000000000000000000043 /* MetricsRepository.swift */,
 					AB0000000000000000000056 /* NutritionRepository.swift */,
 					AB0000000000000000000057 /* RoutineRepository.swift */,
+					AB0000000000000000000066 /* GlowRepository.swift */,
 					AB0000000000000000000028 /* UserRepository.swift */,
 					AB0000000000000000000029 /* LocalUserRepository.swift */,
 				);
@@ -378,6 +396,8 @@
 					AB0000000000000000000050 /* MetricsRepositoryTests.swift */,
 					AB0000000000000000000062 /* NutritionRepositoryTests.swift */,
 					AB0000000000000000000063 /* RoutineRepositoryTests.swift */,
+					AB0000000000000000000069 /* GlowScoreEngineTests.swift */,
+					AB0000000000000000000070 /* GlowRepositoryTests.swift */,
 				);
 				path = GlowAppTests;
 				sourceTree = "<group>";
@@ -454,6 +474,31 @@
 				isa = PBXGroup;
 				children = (
 					AB0000000000000000000058 /* NutritionViewModel.swift */,
+				);
+				path = ViewModels;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000031 /* GlowScore */ = {
+				isa = PBXGroup;
+				children = (
+					AC0000000000000000000032 /* Views */,
+					AC0000000000000000000033 /* ViewModels */,
+				);
+				path = GlowScore;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000032 /* Views */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000068 /* GlowScoreSectionView.swift */,
+				);
+				path = Views;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000033 /* ViewModels */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000067 /* GlowScoreViewModel.swift */,
 				);
 				path = ViewModels;
 				sourceTree = "<group>";
@@ -617,6 +662,11 @@
 					AA0000000000000000000057 /* NutritionQuickLogCardView.swift in Sources */,
 					AA0000000000000000000058 /* NutritionLogEditorView.swift in Sources */,
 					AA0000000000000000000059 /* RoutineStatusCardView.swift in Sources */,
+					AA0000000000000000000062 /* GlowScore.swift in Sources */,
+					AA0000000000000000000063 /* GlowScoreEngine.swift in Sources */,
+					AA0000000000000000000064 /* GlowRepository.swift in Sources */,
+					AA0000000000000000000065 /* GlowScoreViewModel.swift in Sources */,
+					AA0000000000000000000066 /* GlowScoreSectionView.swift in Sources */,
 				);
 				runOnlyForDeploymentPostprocessing = 0;
 			};
@@ -630,6 +680,8 @@
 					AA0000000000000000000048 /* MetricsRepositoryTests.swift in Sources */,
 					AA0000000000000000000060 /* NutritionRepositoryTests.swift in Sources */,
 					AA0000000000000000000061 /* RoutineRepositoryTests.swift in Sources */,
+					AA0000000000000000000067 /* GlowScoreEngineTests.swift in Sources */,
+					AA0000000000000000000068 /* GlowRepositoryTests.swift in Sources */,
 				);
 				runOnlyForDeploymentPostprocessing = 0;
 			};
