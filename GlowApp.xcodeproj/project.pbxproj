@@ -47,6 +47,14 @@
 		AA0000000000000000000038 /* LocalUserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000040 /* LocalUserRepositoryTests.swift */; };
 		AA0000000000000000000039 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000041 /* AppRouterTests.swift */; };
 		AA0000000000000000000040 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000042 /* XCTest.framework */; };
+		AA0000000000000000000041 /* MetricsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000043 /* MetricsRepository.swift */; };
+		AA0000000000000000000042 /* DailyMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000044 /* DailyMetrics.swift */; };
+		AA0000000000000000000043 /* DayBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000045 /* DayBoundary.swift */; };
+		AA0000000000000000000044 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000046 /* DashboardViewModel.swift */; };
+		AA0000000000000000000045 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000047 /* DashboardView.swift */; };
+		AA0000000000000000000046 /* DashboardMetricCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000048 /* DashboardMetricCardView.swift */; };
+		AA0000000000000000000047 /* HealthConnectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000049 /* HealthConnectionCardView.swift */; };
+		AA0000000000000000000048 /* MetricsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000050 /* MetricsRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +110,14 @@
 		AB0000000000000000000040 /* LocalUserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserRepositoryTests.swift; sourceTree = "<group>"; };
 		AB0000000000000000000041 /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
 		AB0000000000000000000042 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		AB0000000000000000000043 /* MetricsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000044 /* DailyMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMetrics.swift; sourceTree = "<group>"; };
+		AB0000000000000000000045 /* DayBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayBoundary.swift; sourceTree = "<group>"; };
+		AB0000000000000000000046 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000047 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000048 /* DashboardMetricCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardMetricCardView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000049 /* HealthConnectionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthConnectionCardView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000050 /* MetricsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,14 +185,16 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		AC0000000000000000000005 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				AC0000000000000000000009 /* Shared */,
-				AC0000000000000000000010 /* Home */,
-				AC0000000000000000000017 /* Onboarding */,
-				AC0000000000000000000011 /* Routines */,
-				AC0000000000000000000012 /* Progress */,
+			AC0000000000000000000005 /* Features */ = {
+				isa = PBXGroup;
+				children = (
+					AC0000000000000000000009 /* Shared */,
+					AC0000000000000000000010 /* Home */,
+					AC0000000000000000000022 /* Dashboard */,
+					AC0000000000000000000025 /* Health */,
+					AC0000000000000000000017 /* Onboarding */,
+					AC0000000000000000000011 /* Routines */,
+					AC0000000000000000000012 /* Progress */,
 				AC0000000000000000000013 /* Settings */,
 			);
 			path = Features;
@@ -205,13 +223,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		AC0000000000000000000008 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				AB0000000000000000000011 /* Constants.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
+			AC0000000000000000000008 /* Utilities */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000011 /* Constants.swift */,
+					AB0000000000000000000045 /* DayBoundary.swift */,
+				);
+				path = Utilities;
+				sourceTree = "<group>";
 		};
 		AC0000000000000000000009 /* Shared */ = {
 			isa = PBXGroup;
@@ -265,20 +284,22 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		AC0000000000000000000015 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				AB0000000000000000000027 /* UserProfile.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
+			AC0000000000000000000015 /* Models */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000027 /* UserProfile.swift */,
+					AB0000000000000000000044 /* DailyMetrics.swift */,
+				);
+				path = Models;
+				sourceTree = "<group>";
 		};
-		AC0000000000000000000016 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				AB0000000000000000000028 /* UserRepository.swift */,
-				AB0000000000000000000029 /* LocalUserRepository.swift */,
-			);
+			AC0000000000000000000016 /* Repositories */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000043 /* MetricsRepository.swift */,
+					AB0000000000000000000028 /* UserRepository.swift */,
+					AB0000000000000000000029 /* LocalUserRepository.swift */,
+				);
 			path = Repositories;
 			sourceTree = "<group>";
 		};
@@ -313,25 +334,68 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		AC0000000000000000000020 /* GlowAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				AB0000000000000000000039 /* UserProfileTests.swift */,
-				AB0000000000000000000040 /* LocalUserRepositoryTests.swift */,
-				AB0000000000000000000041 /* AppRouterTests.swift */,
-			);
-			path = GlowAppTests;
-			sourceTree = "<group>";
-		};
-		AC0000000000000000000021 /* Frameworks */ = {
+			AC0000000000000000000020 /* GlowAppTests */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000039 /* UserProfileTests.swift */,
+					AB0000000000000000000040 /* LocalUserRepositoryTests.swift */,
+					AB0000000000000000000041 /* AppRouterTests.swift */,
+					AB0000000000000000000050 /* MetricsRepositoryTests.swift */,
+				);
+				path = GlowAppTests;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000021 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				AB0000000000000000000042 /* XCTest.framework */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
+				name = Frameworks;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000022 /* Dashboard */ = {
+				isa = PBXGroup;
+				children = (
+					AC0000000000000000000023 /* Views */,
+					AC0000000000000000000024 /* ViewModels */,
+				);
+				path = Dashboard;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000023 /* Views */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000047 /* DashboardView.swift */,
+					AB0000000000000000000048 /* DashboardMetricCardView.swift */,
+				);
+				path = Views;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000024 /* ViewModels */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000046 /* DashboardViewModel.swift */,
+				);
+				path = ViewModels;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000025 /* Health */ = {
+				isa = PBXGroup;
+				children = (
+					AC0000000000000000000026 /* Views */,
+				);
+				path = Health;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000026 /* Views */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000049 /* HealthConnectionCardView.swift */,
+				);
+				path = Views;
+				sourceTree = "<group>";
+			};
+	/* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		AE0000000000000000000001 /* GlowApp */ = {
@@ -377,11 +441,16 @@
 			attributes = {
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					AE0000000000000000000001 = {
-						CreatedOnToolsVersion = 16.0;
+						AE0000000000000000000001 = {
+							CreatedOnToolsVersion = 16.0;
+							SystemCapabilities = {
+								com.apple.HealthKit = {
+									enabled = 1;
+								};
+							};
+						};
 					};
 				};
-			};
 			buildConfigurationList = BB0000000000000000000001 /* Build configuration list for PBXProject "GlowApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
@@ -446,32 +515,40 @@
 				AA0000000000000000000021 /* RoutinesView.swift in Sources */,
 				AA0000000000000000000022 /* ProgressViewModel.swift in Sources */,
 				AA0000000000000000000023 /* ProgressView.swift in Sources */,
-				AA0000000000000000000024 /* SettingsViewModel.swift in Sources */,
-				AA0000000000000000000025 /* SettingsView.swift in Sources */,
-				AA0000000000000000000026 /* UserProfile.swift in Sources */,
-				AA0000000000000000000027 /* UserRepository.swift in Sources */,
-				AA0000000000000000000028 /* LocalUserRepository.swift in Sources */,
-				AA0000000000000000000029 /* OnboardingViewModel.swift in Sources */,
-				AA0000000000000000000030 /* OnboardingScaffoldView.swift in Sources */,
-				AA0000000000000000000031 /* OnboardingFlowView.swift in Sources */,
+					AA0000000000000000000024 /* SettingsViewModel.swift in Sources */,
+					AA0000000000000000000025 /* SettingsView.swift in Sources */,
+					AA0000000000000000000026 /* UserProfile.swift in Sources */,
+					AA0000000000000000000042 /* DailyMetrics.swift in Sources */,
+					AA0000000000000000000027 /* UserRepository.swift in Sources */,
+					AA0000000000000000000041 /* MetricsRepository.swift in Sources */,
+					AA0000000000000000000028 /* LocalUserRepository.swift in Sources */,
+					AA0000000000000000000043 /* DayBoundary.swift in Sources */,
+					AA0000000000000000000029 /* OnboardingViewModel.swift in Sources */,
+					AA0000000000000000000030 /* OnboardingScaffoldView.swift in Sources */,
+					AA0000000000000000000031 /* OnboardingFlowView.swift in Sources */,
 				AA0000000000000000000032 /* WelcomeView.swift in Sources */,
 				AA0000000000000000000033 /* ValuePropositionView.swift in Sources */,
-				AA0000000000000000000034 /* GoalSelectionView.swift in Sources */,
-				AA0000000000000000000035 /* TargetSetupView.swift in Sources */,
-				AA0000000000000000000036 /* OnboardingCompletionView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+					AA0000000000000000000034 /* GoalSelectionView.swift in Sources */,
+					AA0000000000000000000035 /* TargetSetupView.swift in Sources */,
+					AA0000000000000000000036 /* OnboardingCompletionView.swift in Sources */,
+					AA0000000000000000000044 /* DashboardViewModel.swift in Sources */,
+					AA0000000000000000000045 /* DashboardView.swift in Sources */,
+					AA0000000000000000000046 /* DashboardMetricCardView.swift in Sources */,
+					AA0000000000000000000047 /* HealthConnectionCardView.swift in Sources */,
+				);
+				runOnlyForDeploymentPostprocessing = 0;
+			};
 		AD0000000000000000000006 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0000000000000000000037 /* UserProfileTests.swift in Sources */,
-				AA0000000000000000000038 /* LocalUserRepositoryTests.swift in Sources */,
-				AA0000000000000000000039 /* AppRouterTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+					AA0000000000000000000037 /* UserProfileTests.swift in Sources */,
+					AA0000000000000000000038 /* LocalUserRepositoryTests.swift in Sources */,
+					AA0000000000000000000039 /* AppRouterTests.swift in Sources */,
+					AA0000000000000000000048 /* MetricsRepositoryTests.swift in Sources */,
+				);
+				runOnlyForDeploymentPostprocessing = 0;
+			};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -507,42 +584,48 @@
 		};
 		BA0000000000000000000003 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Glow App";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				buildSettings = {
+					CODE_SIGN_ENTITLEMENTS = GlowApp.entitlements;
+					CODE_SIGN_STYLE = Automatic;
+					CURRENT_PROJECT_VERSION = 1;
+					ENABLE_PREVIEWS = YES;
+					ENABLE_TESTABILITY = YES;
+					GENERATE_INFOPLIST_FILE = YES;
+					INFOPLIST_KEY_CFBundleDisplayName = "Glow App";
+					INFOPLIST_KEY_NSHealthShareUsageDescription = "Glow reads your Apple Health steps, active calories, workouts, sleep, and latest weight to populate today's dashboard.";
+					INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+					INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+					INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.GlowApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
+					PRODUCT_BUNDLE_IDENTIFIER = com.example.GlowApp;
+					PRODUCT_NAME = "$(TARGET_NAME)";
+					SDKROOT = iphoneos;
+					SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+					SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+					SWIFT_EMIT_LOC_STRINGS = YES;
+					SWIFT_VERSION = 5.0;
+					TARGETED_DEVICE_FAMILY = 1;
+				};
 			name = Debug;
 		};
 		BA0000000000000000000004 /* Release */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Glow App";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				buildSettings = {
+					CODE_SIGN_ENTITLEMENTS = GlowApp.entitlements;
+					CODE_SIGN_STYLE = Automatic;
+					CURRENT_PROJECT_VERSION = 1;
+					ENABLE_PREVIEWS = YES;
+					GENERATE_INFOPLIST_FILE = YES;
+					INFOPLIST_KEY_CFBundleDisplayName = "Glow App";
+					INFOPLIST_KEY_NSHealthShareUsageDescription = "Glow reads your Apple Health steps, active calories, workouts, sleep, and latest weight to populate today's dashboard.";
+					INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+					INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+					INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,26 +644,28 @@
 		};
 		BA0000000000000000000005 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.GlowAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlowApp.app/GlowApp";
+				buildSettings = {
+					BUNDLE_LOADER = "$(TEST_HOST)";
+					CODE_SIGN_STYLE = Automatic;
+					CURRENT_PROJECT_VERSION = 1;
+					ENABLE_TESTABILITY = YES;
+					GENERATE_INFOPLIST_FILE = YES;
+					IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+					LD_RUNPATH_SEARCH_PATHS = (
+						"$(inherited)",
+						"@executable_path/Frameworks",
+						"@loader_path/Frameworks",
+					);
+					MARKETING_VERSION = 1.0;
+					PRODUCT_BUNDLE_IDENTIFIER = com.example.GlowAppTests;
+					PRODUCT_NAME = "$(TARGET_NAME)";
+					SDKROOT = iphoneos;
+					SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+					SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+					SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+					SWIFT_VERSION = 5.0;
+					TARGETED_DEVICE_FAMILY = 1;
+					TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlowApp.app/GlowApp";
 			};
 			name = Debug;
 		};

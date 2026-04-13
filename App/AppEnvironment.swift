@@ -4,6 +4,7 @@ final class AppEnvironment {
     let userRepository: any UserRepository
     let authService: any AuthService
     let healthKitService: any HealthKitService
+    let metricsRepository: any MetricsRepository
     let supabaseService: any SupabaseService
     let subscriptionService: any SubscriptionService
     let analyticsService: any AnalyticsService
@@ -11,7 +12,8 @@ final class AppEnvironment {
     init(
         userRepository: any UserRepository = LocalUserRepository(),
         authService: any AuthService = StubAuthService(),
-        healthKitService: any HealthKitService = StubHealthKitService(),
+        healthKitService: any HealthKitService = LiveHealthKitService(),
+        metricsRepository: (any MetricsRepository)? = nil,
         supabaseService: any SupabaseService = StubSupabaseService(),
         subscriptionService: any SubscriptionService = StubSubscriptionService(),
         analyticsService: any AnalyticsService = StubAnalyticsService()
@@ -19,6 +21,9 @@ final class AppEnvironment {
         self.userRepository = userRepository
         self.authService = authService
         self.healthKitService = healthKitService
+        self.metricsRepository = metricsRepository ?? LocalMetricsRepository(
+            healthKitService: healthKitService
+        )
         self.supabaseService = supabaseService
         self.subscriptionService = subscriptionService
         self.analyticsService = analyticsService
@@ -34,8 +39,9 @@ final class AppEnvironment {
         OnboardingViewModel(userRepository: userRepository)
     }
 
+    @MainActor
     func makeHomeViewModel() -> HomeViewModel {
-        HomeViewModel()
+        HomeViewModel(metricsRepository: metricsRepository)
     }
 
     func makeRoutinesViewModel() -> RoutinesViewModel {
@@ -53,11 +59,20 @@ final class AppEnvironment {
 
 extension AppEnvironment {
     static let live = AppEnvironment()
-    static let preview = AppEnvironment(
-        userRepository: LocalUserRepository(
-            userDefaults: UserDefaults(suiteName: "GlowApp.preview") ?? .standard
+
+    static let preview: AppEnvironment = {
+        let userDefaults = UserDefaults(suiteName: "GlowApp.preview") ?? .standard
+        let healthKitService = StubHealthKitService()
+
+        return AppEnvironment(
+            userRepository: LocalUserRepository(userDefaults: userDefaults),
+            healthKitService: healthKitService,
+            metricsRepository: LocalMetricsRepository(
+                healthKitService: healthKitService,
+                userDefaults: userDefaults
+            )
         )
-    )
+    }()
 }
 
 private struct AppEnvironmentKey: EnvironmentKey {

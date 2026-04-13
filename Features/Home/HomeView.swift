@@ -1,21 +1,30 @@
 import SwiftUI
+import UIKit
 
 struct HomeView: View {
-    let viewModel: HomeViewModel
+    @Environment(\.openURL) private var openURL
+    @StateObject private var viewModel: HomeViewModel
 
-    init(viewModel: HomeViewModel = HomeViewModel()) {
-        self.viewModel = viewModel
+    init(viewModel: HomeViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {
-        FeaturePlaceholderView(
-            title: viewModel.title,
-            message: viewModel.message,
-            highlights: viewModel.highlights,
-            buttonTitle: viewModel.buttonTitle,
-            buttonSystemImage: viewModel.buttonSystemImage,
-            onPrimaryAction: {}
+        DashboardView(
+            viewModel: viewModel,
+            onOpenSettings: openSettings
         )
         .navigationTitle(viewModel.navigationTitle)
+        .task {
+            await viewModel.loadIfNeeded()
+        }
+    }
+
+    private func openSettings() {
+        guard let url = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+
+        openURL(url)
     }
 }

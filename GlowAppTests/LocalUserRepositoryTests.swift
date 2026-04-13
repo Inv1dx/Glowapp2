@@ -37,7 +37,9 @@ final class LocalUserRepositoryTests: XCTestCase {
         try await repository.saveUserProfile(profile)
         try await repository.clearUserProfile()
 
-        XCTAssertNil(try await repository.loadUserProfile())
+        let loadedProfile = try await repository.loadUserProfile()
+
+        XCTAssertNil(loadedProfile)
     }
 
     func testSaveRejectsInvalidProfile() async throws {
