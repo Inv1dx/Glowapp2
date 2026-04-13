@@ -3,12 +3,17 @@ import SwiftUI
 struct PrimaryButton: View {
     let title: String
     var systemImage: String? = nil
+    var isEnabled: Bool = true
+    var isLoading: Bool = false
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
             HStack(spacing: GlowSpacing.xSmall) {
-                if let systemImage {
+                if isLoading {
+                    SwiftUI.ProgressView()
+                        .tint(.white)
+                } else if let systemImage {
                     Image(systemName: systemImage)
                         .font(.system(size: 15, weight: .semibold))
                 }
@@ -20,7 +25,7 @@ struct PrimaryButton: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, GlowSpacing.small)
             .padding(.horizontal, GlowSpacing.medium)
-            .background(GlowColors.accent)
+            .background(isEnabled ? GlowColors.accent : GlowColors.textSecondary.opacity(0.35))
             .clipShape(
                 RoundedRectangle(
                     cornerRadius: GlowSpacing.cornerRadius,
@@ -28,6 +33,8 @@ struct PrimaryButton: View {
                 )
             )
         }
+        .disabled(!isEnabled || isLoading)
         .buttonStyle(.plain)
+        .opacity(isEnabled ? 1 : 0.75)
     }
 }

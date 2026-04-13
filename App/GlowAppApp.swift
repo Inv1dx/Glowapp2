@@ -2,8 +2,15 @@ import SwiftUI
 
 @main
 struct GlowAppApp: App {
-    private let environment = AppEnvironment.live
-    @StateObject private var router = AppRouter()
+    private let environment: AppEnvironment
+    @StateObject private var router: AppRouter
+
+    @MainActor
+    init() {
+        let environment = AppEnvironment.live
+        self.environment = environment
+        _router = StateObject(wrappedValue: environment.makeAppRouter())
+    }
 
     var body: some Scene {
         WindowGroup {

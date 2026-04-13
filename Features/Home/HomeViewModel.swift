@@ -5,7 +5,7 @@ struct HomeViewModel {
     let highlights = [
         "Root tab is wired and ready for future dashboard content",
         "The app environment can inject real services without changing the shell",
-        "Onboarding can be inserted later above the same root router"
+        "Onboarding now routes above the same root shell without changing the tabs"
     ]
     let buttonTitle = "Home shell ready"
     let buttonSystemImage = "sparkles"
