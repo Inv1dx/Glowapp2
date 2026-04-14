@@ -2,6 +2,7 @@ import Foundation
 
 protocol GlowRepository {
     func loadScore(for date: Date) async -> GlowScore?
+    func loadScores() async -> [GlowScore]
     func upsertScore(_ score: GlowScore) async
 }
 
@@ -33,6 +34,10 @@ final class LocalGlowRepository: GlowRepository {
         return loadAllScores().first {
             DayBoundaryFactory.isSameDay($0.date, normalizedDate, calendar: calendar)
         }
+    }
+
+    func loadScores() async -> [GlowScore] {
+        loadAllScores()
     }
 
     func upsertScore(_ score: GlowScore) async {

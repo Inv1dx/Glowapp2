@@ -89,6 +89,17 @@
 		AA0000000000000000000082 /* RecapEntryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000082 /* RecapEntryCardView.swift */; };
 		AA0000000000000000000083 /* RecapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000083 /* RecapView.swift */; };
 		AA0000000000000000000084 /* RecapEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000084 /* RecapEngineTests.swift */; };
+		AA0000000000000000000085 /* ProgressEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000085 /* ProgressEntry.swift */; };
+		AA0000000000000000000086 /* PhotoStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000086 /* PhotoStorageService.swift */; };
+		AA0000000000000000000087 /* ProgressRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000087 /* ProgressRepository.swift */; };
+		AA0000000000000000000088 /* ProgressInsights.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000088 /* ProgressInsights.swift */; };
+		AA0000000000000000000089 /* ProgressEntryEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000089 /* ProgressEntryEditorViewModel.swift */; };
+		AA0000000000000000000090 /* ProgressSupportViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000090 /* ProgressSupportViews.swift */; };
+		AA0000000000000000000091 /* ProgressTrendCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000091 /* ProgressTrendCardView.swift */; };
+		AA0000000000000000000092 /* ProgressEntryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000092 /* ProgressEntryCardView.swift */; };
+		AA0000000000000000000093 /* ProgressEntryEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000093 /* ProgressEntryEditorView.swift */; };
+		AA0000000000000000000094 /* ProgressRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000094 /* ProgressRepositoryTests.swift */; };
+		AA0000000000000000000095 /* ProgressInsightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000095 /* ProgressInsightsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +197,17 @@
 		AB0000000000000000000082 /* RecapEntryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapEntryCardView.swift; sourceTree = "<group>"; };
 		AB0000000000000000000083 /* RecapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapView.swift; sourceTree = "<group>"; };
 		AB0000000000000000000084 /* RecapEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapEngineTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000085 /* ProgressEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressEntry.swift; sourceTree = "<group>"; };
+		AB0000000000000000000086 /* PhotoStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageService.swift; sourceTree = "<group>"; };
+		AB0000000000000000000087 /* ProgressRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000088 /* ProgressInsights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInsights.swift; sourceTree = "<group>"; };
+		AB0000000000000000000089 /* ProgressEntryEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressEntryEditorViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000090 /* ProgressSupportViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSupportViews.swift; sourceTree = "<group>"; };
+		AB0000000000000000000091 /* ProgressTrendCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTrendCardView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000092 /* ProgressEntryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressEntryCardView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000093 /* ProgressEntryEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressEntryEditorView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000094 /* ProgressRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRepositoryTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000095 /* ProgressInsightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInsightsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +313,7 @@
 				AB0000000000000000000014 /* SupabaseService.swift */,
 				AB0000000000000000000015 /* SubscriptionService.swift */,
 				AB0000000000000000000016 /* AnalyticsService.swift */,
+				AB0000000000000000000086 /* PhotoStorageService.swift */,
 				AB0000000000000000000065 /* GlowScoreEngine.swift */,
 				AB0000000000000000000072 /* GlowPlanEngine.swift */,
 				AB0000000000000000000080 /* RecapEngine.swift */,
@@ -337,8 +360,8 @@
 		AC0000000000000000000012 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
-				AB0000000000000000000022 /* ProgressViewModel.swift */,
-				AB0000000000000000000023 /* ProgressView.swift */,
+				AC0000000000000000000040 /* Views */,
+				AC0000000000000000000041 /* ViewModels */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -371,6 +394,7 @@
 					AB0000000000000000000054 /* RoutineEntry.swift */,
 					AB0000000000000000000055 /* RoutineDaySummary.swift */,
 					AB0000000000000000000064 /* GlowScore.swift */,
+					AB0000000000000000000085 /* ProgressEntry.swift */,
 					AB0000000000000000000071 /* GlowPlan.swift */,
 					AB0000000000000000000079 /* DailyRecap.swift */,
 				);
@@ -384,6 +408,7 @@
 					AB0000000000000000000056 /* NutritionRepository.swift */,
 					AB0000000000000000000057 /* RoutineRepository.swift */,
 					AB0000000000000000000066 /* GlowRepository.swift */,
+					AB0000000000000000000087 /* ProgressRepository.swift */,
 					AB0000000000000000000073 /* GlowPlanRepository.swift */,
 					AB0000000000000000000028 /* UserRepository.swift */,
 					AB0000000000000000000029 /* LocalUserRepository.swift */,
@@ -437,6 +462,8 @@
 					AB0000000000000000000077 /* GlowPlanRepositoryTests.swift */,
 					AB0000000000000000000078 /* DailyPlanViewModelTests.swift */,
 					AB0000000000000000000084 /* RecapEngineTests.swift */,
+					AB0000000000000000000094 /* ProgressRepositoryTests.swift */,
+					AB0000000000000000000095 /* ProgressInsightsTests.swift */,
 				);
 				path = GlowAppTests;
 				sourceTree = "<group>";
@@ -593,6 +620,28 @@
 				path = ViewModels;
 				sourceTree = "<group>";
 			};
+			AC0000000000000000000040 /* Views */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000023 /* ProgressView.swift */,
+					AB0000000000000000000090 /* ProgressSupportViews.swift */,
+					AB0000000000000000000091 /* ProgressTrendCardView.swift */,
+					AB0000000000000000000092 /* ProgressEntryCardView.swift */,
+					AB0000000000000000000093 /* ProgressEntryEditorView.swift */,
+				);
+				path = Views;
+				sourceTree = "<group>";
+			};
+			AC0000000000000000000041 /* ViewModels */ = {
+				isa = PBXGroup;
+				children = (
+					AB0000000000000000000022 /* ProgressViewModel.swift */,
+					AB0000000000000000000088 /* ProgressInsights.swift */,
+					AB0000000000000000000089 /* ProgressEntryEditorViewModel.swift */,
+				);
+				path = ViewModels;
+				sourceTree = "<group>";
+			};
 			AC0000000000000000000030 /* Views */ = {
 				isa = PBXGroup;
 				children = (
@@ -714,6 +763,7 @@
 				AA0000000000000000000014 /* SupabaseService.swift in Sources */,
 				AA0000000000000000000015 /* SubscriptionService.swift in Sources */,
 				AA0000000000000000000016 /* AnalyticsService.swift in Sources */,
+				AA0000000000000000000086 /* PhotoStorageService.swift in Sources */,
 				AA0000000000000000000072 /* GlowPlanEngine.swift in Sources */,
 				AA0000000000000000000017 /* FeaturePlaceholderView.swift in Sources */,
 				AA0000000000000000000018 /* HomeViewModel.swift in Sources */,
@@ -721,7 +771,13 @@
 				AA0000000000000000000020 /* RoutinesViewModel.swift in Sources */,
 				AA0000000000000000000021 /* RoutinesView.swift in Sources */,
 				AA0000000000000000000022 /* ProgressViewModel.swift in Sources */,
+				AA0000000000000000000088 /* ProgressInsights.swift in Sources */,
+				AA0000000000000000000089 /* ProgressEntryEditorViewModel.swift in Sources */,
 				AA0000000000000000000023 /* ProgressView.swift in Sources */,
+				AA0000000000000000000090 /* ProgressSupportViews.swift in Sources */,
+				AA0000000000000000000091 /* ProgressTrendCardView.swift in Sources */,
+				AA0000000000000000000092 /* ProgressEntryCardView.swift in Sources */,
+				AA0000000000000000000093 /* ProgressEntryEditorView.swift in Sources */,
 					AA0000000000000000000024 /* SettingsViewModel.swift in Sources */,
 					AA0000000000000000000025 /* SettingsView.swift in Sources */,
 					AA0000000000000000000026 /* UserProfile.swift in Sources */,
@@ -731,12 +787,14 @@
 					AA0000000000000000000051 /* RoutineTemplate.swift in Sources */,
 					AA0000000000000000000052 /* RoutineEntry.swift in Sources */,
 					AA0000000000000000000053 /* RoutineDaySummary.swift in Sources */,
+					AA0000000000000000000085 /* ProgressEntry.swift in Sources */,
 					AA0000000000000000000071 /* GlowPlan.swift in Sources */,
 					AA0000000000000000000079 /* DailyRecap.swift in Sources */,
 					AA0000000000000000000027 /* UserRepository.swift in Sources */,
 					AA0000000000000000000041 /* MetricsRepository.swift in Sources */,
 					AA0000000000000000000054 /* NutritionRepository.swift in Sources */,
 					AA0000000000000000000055 /* RoutineRepository.swift in Sources */,
+					AA0000000000000000000087 /* ProgressRepository.swift in Sources */,
 					AA0000000000000000000073 /* GlowPlanRepository.swift in Sources */,
 					AA0000000000000000000028 /* LocalUserRepository.swift in Sources */,
 					AA0000000000000000000043 /* DayBoundary.swift in Sources */,
@@ -786,6 +844,8 @@
 					AA0000000000000000000077 /* GlowPlanRepositoryTests.swift in Sources */,
 					AA0000000000000000000078 /* DailyPlanViewModelTests.swift in Sources */,
 					AA0000000000000000000084 /* RecapEngineTests.swift in Sources */,
+					AA0000000000000000000094 /* ProgressRepositoryTests.swift in Sources */,
+					AA0000000000000000000095 /* ProgressInsightsTests.swift in Sources */,
 				);
 				runOnlyForDeploymentPostprocessing = 0;
 			};

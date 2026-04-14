@@ -9,9 +9,11 @@ final class AppEnvironment {
     let routineRepository: any RoutineRepository
     let glowRepository: any GlowRepository
     let glowPlanRepository: any GlowPlanRepository
+    let progressRepository: any ProgressRepository
     let supabaseService: any SupabaseService
     let subscriptionService: any SubscriptionService
     let analyticsService: any AnalyticsService
+    let photoStorageService: any PhotoStorageService
 
     init(
         userRepository: any UserRepository = LocalUserRepository(),
@@ -22,10 +24,14 @@ final class AppEnvironment {
         routineRepository: (any RoutineRepository)? = nil,
         glowRepository: (any GlowRepository)? = nil,
         glowPlanRepository: (any GlowPlanRepository)? = nil,
+        progressRepository: (any ProgressRepository)? = nil,
         supabaseService: any SupabaseService = StubSupabaseService(),
         subscriptionService: any SubscriptionService = StubSubscriptionService(),
-        analyticsService: any AnalyticsService = StubAnalyticsService()
+        analyticsService: any AnalyticsService = StubAnalyticsService(),
+        photoStorageService: (any PhotoStorageService)? = nil
     ) {
+        let resolvedPhotoStorageService = photoStorageService ?? LocalPhotoStorageService()
+
         self.userRepository = userRepository
         self.authService = authService
         self.healthKitService = healthKitService
@@ -36,9 +42,13 @@ final class AppEnvironment {
         self.routineRepository = routineRepository ?? LocalRoutineRepository()
         self.glowRepository = glowRepository ?? LocalGlowRepository()
         self.glowPlanRepository = glowPlanRepository ?? LocalGlowPlanRepository()
+        self.progressRepository = progressRepository ?? LocalProgressRepository(
+            photoStorageService: resolvedPhotoStorageService
+        )
         self.supabaseService = supabaseService
         self.subscriptionService = subscriptionService
         self.analyticsService = analyticsService
+        self.photoStorageService = resolvedPhotoStorageService
     }
 
     @MainActor
@@ -87,8 +97,13 @@ final class AppEnvironment {
         RecapViewModel(userRepository: userRepository)
     }
 
+    @MainActor
     func makeProgressViewModel() -> ProgressViewModel {
-        ProgressViewModel()
+        ProgressViewModel(
+            progressRepository: progressRepository,
+            glowRepository: glowRepository,
+            photoStorageService: photoStorageService
+        )
     }
 
     func makeSettingsViewModel() -> SettingsViewModel {
@@ -102,6 +117,10 @@ extension AppEnvironment {
     static let preview: AppEnvironment = {
         let userDefaults = UserDefaults(suiteName: "GlowApp.preview") ?? .standard
         let healthKitService = StubHealthKitService()
+        let photoStorageService = LocalPhotoStorageService(
+            baseDirectoryURL: FileManager.default.temporaryDirectory
+                .appendingPathComponent("GlowAppPreview", isDirectory: true)
+        )
 
         return AppEnvironment(
             userRepository: LocalUserRepository(userDefaults: userDefaults),
@@ -113,7 +132,12 @@ extension AppEnvironment {
             nutritionRepository: LocalNutritionRepository(userDefaults: userDefaults),
             routineRepository: LocalRoutineRepository(userDefaults: userDefaults),
             glowRepository: LocalGlowRepository(userDefaults: userDefaults),
-            glowPlanRepository: LocalGlowPlanRepository(userDefaults: userDefaults)
+            glowPlanRepository: LocalGlowPlanRepository(userDefaults: userDefaults),
+            progressRepository: LocalProgressRepository(
+                userDefaults: userDefaults,
+                photoStorageService: photoStorageService
+            ),
+            photoStorageService: photoStorageService
         )
     }()
 }

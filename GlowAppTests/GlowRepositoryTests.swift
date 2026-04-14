@@ -30,6 +30,19 @@ final class GlowRepositoryTests: XCTestCase {
         XCTAssertEqual(secondLoaded?.overallScore, 88)
     }
 
+    func testLoadScoresReturnsNewestFirstHistory() async {
+        let repository = makeRepository()
+        let firstDay = makeDate(year: 2026, month: 4, day: 12, hour: 9)
+        let secondDay = makeDate(year: 2026, month: 4, day: 14, hour: 9)
+
+        await repository.upsertScore(makeScore(date: firstDay, overallScore: 64))
+        await repository.upsertScore(makeScore(date: secondDay, overallScore: 82))
+
+        let scores = await repository.loadScores()
+
+        XCTAssertEqual(scores.map(\.overallScore), [82, 64])
+    }
+
     private let calendar: Calendar = {
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = TimeZone(secondsFromGMT: 0) ?? TimeZone(identifier: "UTC") ?? .current
