@@ -93,6 +93,10 @@ final class LocalMetricsRepository: MetricsRepository {
         return await liveSnapshotWithCacheFallback()
     }
 
+    func cacheRemoteSnapshot(_ snapshot: MetricsRepositorySnapshot) {
+        persist(snapshot)
+    }
+
     private func liveSnapshotWithCacheFallback() async -> MetricsRepositorySnapshot {
         let cachedRecord = loadCurrentDayCacheRecord()
 

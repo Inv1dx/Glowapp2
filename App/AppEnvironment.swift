@@ -16,8 +16,8 @@ final class AppEnvironment {
     let photoStorageService: any PhotoStorageService
 
     init(
-        userRepository: any UserRepository = LocalUserRepository(),
-        authService: any AuthService = StubAuthService(),
+        userRepository: (any UserRepository)? = nil,
+        authService: (any AuthService)? = nil,
         healthKitService: any HealthKitService = LiveHealthKitService(),
         metricsRepository: (any MetricsRepository)? = nil,
         nutritionRepository: (any NutritionRepository)? = nil,
@@ -25,27 +25,64 @@ final class AppEnvironment {
         glowRepository: (any GlowRepository)? = nil,
         glowPlanRepository: (any GlowPlanRepository)? = nil,
         progressRepository: (any ProgressRepository)? = nil,
-        supabaseService: any SupabaseService = StubSupabaseService(),
+        supabaseService: (any SupabaseService)? = nil,
         subscriptionService: any SubscriptionService = StubSubscriptionService(),
         analyticsService: any AnalyticsService = StubAnalyticsService(),
         photoStorageService: (any PhotoStorageService)? = nil
     ) {
+        let resolvedAuthService = authService ?? StableAnonymousAuthService()
+        let resolvedSupabaseService = supabaseService ?? LiveSupabaseService()
         let resolvedPhotoStorageService = photoStorageService ?? LocalPhotoStorageService()
-
-        self.userRepository = userRepository
-        self.authService = authService
-        self.healthKitService = healthKitService
-        self.metricsRepository = metricsRepository ?? LocalMetricsRepository(
+        let localUserRepository = LocalUserRepository()
+        let localMetricsRepository = LocalMetricsRepository(
             healthKitService: healthKitService
         )
-        self.nutritionRepository = nutritionRepository ?? LocalNutritionRepository()
-        self.routineRepository = routineRepository ?? LocalRoutineRepository()
-        self.glowRepository = glowRepository ?? LocalGlowRepository()
-        self.glowPlanRepository = glowPlanRepository ?? LocalGlowPlanRepository()
-        self.progressRepository = progressRepository ?? LocalProgressRepository(
+        let localNutritionRepository = LocalNutritionRepository()
+        let localRoutineRepository = LocalRoutineRepository()
+        let localGlowRepository = LocalGlowRepository()
+        let localGlowPlanRepository = LocalGlowPlanRepository()
+        let localProgressRepository = LocalProgressRepository(
             photoStorageService: resolvedPhotoStorageService
         )
-        self.supabaseService = supabaseService
+
+        self.userRepository = userRepository ?? SupabaseUserRepository(
+            supabaseService: resolvedSupabaseService,
+            localRepository: localUserRepository,
+            authService: resolvedAuthService
+        )
+        self.authService = resolvedAuthService
+        self.healthKitService = healthKitService
+        self.metricsRepository = metricsRepository ?? SupabaseMetricsRepository(
+            supabaseService: resolvedSupabaseService,
+            localRepository: localMetricsRepository,
+            authService: resolvedAuthService
+        )
+        self.nutritionRepository = nutritionRepository ?? SupabaseNutritionRepository(
+            supabaseService: resolvedSupabaseService,
+            localRepository: localNutritionRepository,
+            authService: resolvedAuthService
+        )
+        self.routineRepository = routineRepository ?? SupabaseRoutineRepository(
+            supabaseService: resolvedSupabaseService,
+            localRepository: localRoutineRepository,
+            authService: resolvedAuthService
+        )
+        self.glowRepository = glowRepository ?? SupabaseGlowRepository(
+            supabaseService: resolvedSupabaseService,
+            localRepository: localGlowRepository,
+            authService: resolvedAuthService
+        )
+        self.glowPlanRepository = glowPlanRepository ?? SupabaseGlowPlanRepository(
+            supabaseService: resolvedSupabaseService,
+            localRepository: localGlowPlanRepository,
+            authService: resolvedAuthService
+        )
+        self.progressRepository = progressRepository ?? SupabaseProgressRepository(
+            supabaseService: resolvedSupabaseService,
+            localRepository: localProgressRepository,
+            authService: resolvedAuthService
+        )
+        self.supabaseService = resolvedSupabaseService
         self.subscriptionService = subscriptionService
         self.analyticsService = analyticsService
         self.photoStorageService = resolvedPhotoStorageService
@@ -106,8 +143,12 @@ final class AppEnvironment {
         )
     }
 
+    @MainActor
     func makeSettingsViewModel() -> SettingsViewModel {
-        SettingsViewModel()
+        SettingsViewModel(
+            authService: authService,
+            supabaseService: supabaseService
+        )
     }
 }
 
@@ -124,6 +165,7 @@ extension AppEnvironment {
 
         return AppEnvironment(
             userRepository: LocalUserRepository(userDefaults: userDefaults),
+            authService: StubAuthService(),
             healthKitService: healthKitService,
             metricsRepository: LocalMetricsRepository(
                 healthKitService: healthKitService,
@@ -137,6 +179,7 @@ extension AppEnvironment {
                 userDefaults: userDefaults,
                 photoStorageService: photoStorageService
             ),
+            supabaseService: StubSupabaseService(),
             photoStorageService: photoStorageService
         )
     }()

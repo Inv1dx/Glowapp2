@@ -173,6 +173,16 @@ final class LocalProgressRepository: ProgressRepository {
         updatesSubject.send()
     }
 
+    func cacheRemoteEntries(_ entries: [ProgressEntry]) {
+        persist(entries)
+    }
+
+    func cacheRemoteEntry(_ entry: ProgressEntry) {
+        var entries = loadAllEntries().filter { $0.id != entry.id }
+        entries.append(entry)
+        persist(entries)
+    }
+
     private func resolvePhotoPath(
         currentPath: String?,
         update: ProgressPhotoUpdate,

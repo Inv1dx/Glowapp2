@@ -100,6 +100,16 @@
 		AA0000000000000000000093 /* ProgressEntryEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000093 /* ProgressEntryEditorView.swift */; };
 		AA0000000000000000000094 /* ProgressRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000094 /* ProgressRepositoryTests.swift */; };
 		AA0000000000000000000095 /* ProgressInsightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000095 /* ProgressInsightsTests.swift */; };
+		AA0000000000000000000096 /* SupabaseRecordMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000096 /* SupabaseRecordMapping.swift */; };
+		AA0000000000000000000097 /* SupabaseRepositorySupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000097 /* SupabaseRepositorySupport.swift */; };
+		AA0000000000000000000098 /* SupabaseUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000098 /* SupabaseUserRepository.swift */; };
+		AA0000000000000000000099 /* SupabaseMetricsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000099 /* SupabaseMetricsRepository.swift */; };
+		AA0000000000000000000100 /* SupabaseNutritionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000100 /* SupabaseNutritionRepository.swift */; };
+		AA0000000000000000000101 /* SupabaseRoutineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000101 /* SupabaseRoutineRepository.swift */; };
+		AA0000000000000000000102 /* SupabaseGlowRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000102 /* SupabaseGlowRepository.swift */; };
+		AA0000000000000000000103 /* SupabaseGlowPlanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000103 /* SupabaseGlowPlanRepository.swift */; };
+		AA0000000000000000000104 /* SupabaseProgressRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000104 /* SupabaseProgressRepository.swift */; };
+		AA0000000000000000000105 /* SupabaseRecordMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000105 /* SupabaseRecordMappingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +218,16 @@
 		AB0000000000000000000093 /* ProgressEntryEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressEntryEditorView.swift; sourceTree = "<group>"; };
 		AB0000000000000000000094 /* ProgressRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRepositoryTests.swift; sourceTree = "<group>"; };
 		AB0000000000000000000095 /* ProgressInsightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInsightsTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000096 /* SupabaseRecordMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseRecordMapping.swift; sourceTree = "<group>"; };
+		AB0000000000000000000097 /* SupabaseRepositorySupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseRepositorySupport.swift; sourceTree = "<group>"; };
+		AB0000000000000000000098 /* SupabaseUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseUserRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000099 /* SupabaseMetricsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseMetricsRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000100 /* SupabaseNutritionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseNutritionRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000101 /* SupabaseRoutineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseRoutineRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000102 /* SupabaseGlowRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseGlowRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000103 /* SupabaseGlowPlanRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseGlowPlanRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000104 /* SupabaseProgressRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseProgressRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000105 /* SupabaseRecordMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseRecordMappingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,6 +432,15 @@
 					AB0000000000000000000073 /* GlowPlanRepository.swift */,
 					AB0000000000000000000028 /* UserRepository.swift */,
 					AB0000000000000000000029 /* LocalUserRepository.swift */,
+					AB0000000000000000000096 /* SupabaseRecordMapping.swift */,
+					AB0000000000000000000097 /* SupabaseRepositorySupport.swift */,
+					AB0000000000000000000098 /* SupabaseUserRepository.swift */,
+					AB0000000000000000000099 /* SupabaseMetricsRepository.swift */,
+					AB0000000000000000000100 /* SupabaseNutritionRepository.swift */,
+					AB0000000000000000000101 /* SupabaseRoutineRepository.swift */,
+					AB0000000000000000000102 /* SupabaseGlowRepository.swift */,
+					AB0000000000000000000103 /* SupabaseGlowPlanRepository.swift */,
+					AB0000000000000000000104 /* SupabaseProgressRepository.swift */,
 				);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -464,6 +493,7 @@
 					AB0000000000000000000084 /* RecapEngineTests.swift */,
 					AB0000000000000000000094 /* ProgressRepositoryTests.swift */,
 					AB0000000000000000000095 /* ProgressInsightsTests.swift */,
+					AB0000000000000000000105 /* SupabaseRecordMappingTests.swift */,
 				);
 				path = GlowAppTests;
 				sourceTree = "<group>";
@@ -797,6 +827,15 @@
 					AA0000000000000000000087 /* ProgressRepository.swift in Sources */,
 					AA0000000000000000000073 /* GlowPlanRepository.swift in Sources */,
 					AA0000000000000000000028 /* LocalUserRepository.swift in Sources */,
+					AA0000000000000000000096 /* SupabaseRecordMapping.swift in Sources */,
+					AA0000000000000000000097 /* SupabaseRepositorySupport.swift in Sources */,
+					AA0000000000000000000098 /* SupabaseUserRepository.swift in Sources */,
+					AA0000000000000000000099 /* SupabaseMetricsRepository.swift in Sources */,
+					AA0000000000000000000100 /* SupabaseNutritionRepository.swift in Sources */,
+					AA0000000000000000000101 /* SupabaseRoutineRepository.swift in Sources */,
+					AA0000000000000000000102 /* SupabaseGlowRepository.swift in Sources */,
+					AA0000000000000000000103 /* SupabaseGlowPlanRepository.swift in Sources */,
+					AA0000000000000000000104 /* SupabaseProgressRepository.swift in Sources */,
 					AA0000000000000000000043 /* DayBoundary.swift in Sources */,
 					AA0000000000000000000029 /* OnboardingViewModel.swift in Sources */,
 					AA0000000000000000000030 /* OnboardingScaffoldView.swift in Sources */,
@@ -846,6 +885,7 @@
 					AA0000000000000000000084 /* RecapEngineTests.swift in Sources */,
 					AA0000000000000000000094 /* ProgressRepositoryTests.swift in Sources */,
 					AA0000000000000000000095 /* ProgressInsightsTests.swift in Sources */,
+					AA0000000000000000000105 /* SupabaseRecordMappingTests.swift in Sources */,
 				);
 				runOnlyForDeploymentPostprocessing = 0;
 			};
@@ -893,6 +933,8 @@
 					GENERATE_INFOPLIST_FILE = YES;
 					INFOPLIST_KEY_CFBundleDisplayName = "Glow App";
 					INFOPLIST_KEY_NSHealthShareUsageDescription = "Glow reads your Apple Health steps, active calories, workouts, sleep, and latest weight to populate today's dashboard.";
+					INFOPLIST_KEY_SUPABASE_ANON_KEY = "sb_publishable_bc05tGg-w8papV6L2CeTUw_Ph47c7iC";
+					INFOPLIST_KEY_SUPABASE_URL = "https://bgpazvzskgulcxwlhfnx.supabase.co";
 					INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 					INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 					INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -923,6 +965,8 @@
 					GENERATE_INFOPLIST_FILE = YES;
 					INFOPLIST_KEY_CFBundleDisplayName = "Glow App";
 					INFOPLIST_KEY_NSHealthShareUsageDescription = "Glow reads your Apple Health steps, active calories, workouts, sleep, and latest weight to populate today's dashboard.";
+					INFOPLIST_KEY_SUPABASE_ANON_KEY = "sb_publishable_bc05tGg-w8papV6L2CeTUw_Ph47c7iC";
+					INFOPLIST_KEY_SUPABASE_URL = "https://bgpazvzskgulcxwlhfnx.supabase.co";
 					INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 					INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 					INFOPLIST_KEY_UILaunchScreen_Generation = YES;

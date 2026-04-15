@@ -91,6 +91,19 @@ final class LocalGlowPlanRepository: GlowPlanRepository {
         updatesSubject.send()
     }
 
+    func cacheRemotePlans(_ plans: [GlowPlan]) {
+        persist(plans.sorted { $0.date > $1.date })
+    }
+
+    func cacheRemotePlan(_ plan: GlowPlan) {
+        var plans = loadAllPlans().filter {
+            !DayBoundaryFactory.isSameDay($0.date, plan.date, calendar: calendar)
+        }
+        plans.append(plan)
+        plans.sort { $0.date > $1.date }
+        persist(plans)
+    }
+
     private func loadAllPlans() -> [GlowPlan] {
         guard
             let data = userDefaults.data(forKey: StorageKey.plans),

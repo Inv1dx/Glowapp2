@@ -87,6 +87,14 @@ final class LocalNutritionRepository: NutritionRepository {
         updatesSubject.send()
     }
 
+    func cacheRemoteLogs(_ logs: [NutritionLog], for date: Date) {
+        var cachedLogs = loadAllLogs().filter {
+            !DayBoundaryFactory.isSameDay($0.loggedAt, date, calendar: calendar)
+        }
+        cachedLogs.append(contentsOf: logs)
+        persist(cachedLogs)
+    }
+
     private func isValid(_ log: NutritionLog) -> Bool {
         guard log.calories >= 0, log.proteinGrams >= 0, log.waterML >= 0 else {
             return false

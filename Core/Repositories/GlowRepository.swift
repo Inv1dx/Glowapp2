@@ -60,6 +60,10 @@ final class LocalGlowRepository: GlowRepository {
         persist(scores)
     }
 
+    func cacheRemoteScores(_ scores: [GlowScore]) {
+        persist(scores.sorted { $0.date > $1.date })
+    }
+
     private func loadAllScores() -> [GlowScore] {
         guard
             let data = userDefaults.data(forKey: StorageKey.scores),

@@ -86,6 +86,10 @@ final class LocalRoutineRepository: RoutineRepository {
         updatesSubject.send()
     }
 
+    func cacheRemoteEntries(_ entries: [RoutineEntry]) {
+        persist(entries)
+    }
+
     private func streakCount(
         for template: RoutineTemplate,
         through date: Date,
