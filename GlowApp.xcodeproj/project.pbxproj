@@ -75,6 +75,10 @@
 		AA0000000000000000000066 /* GlowScoreSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000068 /* GlowScoreSectionView.swift */; };
 		AA0000000000000000000067 /* GlowScoreEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000069 /* GlowScoreEngineTests.swift */; };
 		AA0000000000000000000068 /* GlowRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000070 /* GlowRepositoryTests.swift */; };
+		AA0000000000000000000106 /* GlowScoreHeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000106 /* GlowScoreHeroCardView.swift */; };
+		AA0000000000000000000107 /* GlowScoreBreakdownCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000107 /* GlowScoreBreakdownCardView.swift */; };
+		AA0000000000000000000108 /* GlowScoreHeroComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000108 /* GlowScoreHeroComponents.swift */; };
+		AA0000000000000000000109 /* GlowScoreHeroSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000109 /* GlowScoreHeroSupport.swift */; };
 		AA0000000000000000000071 /* GlowPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000071 /* GlowPlan.swift */; };
 		AA0000000000000000000072 /* GlowPlanEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000072 /* GlowPlanEngine.swift */; };
 		AA0000000000000000000073 /* GlowPlanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000073 /* GlowPlanRepository.swift */; };
@@ -193,6 +197,10 @@
 		AB0000000000000000000068 /* GlowScoreSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreSectionView.swift; sourceTree = "<group>"; };
 		AB0000000000000000000069 /* GlowScoreEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreEngineTests.swift; sourceTree = "<group>"; };
 		AB0000000000000000000070 /* GlowRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowRepositoryTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000106 /* GlowScoreHeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreHeroCardView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000107 /* GlowScoreBreakdownCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreBreakdownCardView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000108 /* GlowScoreHeroComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreHeroComponents.swift; sourceTree = "<group>"; };
+		AB0000000000000000000109 /* GlowScoreHeroSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowScoreHeroSupport.swift; sourceTree = "<group>"; };
 		AB0000000000000000000071 /* GlowPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowPlan.swift; sourceTree = "<group>"; };
 		AB0000000000000000000072 /* GlowPlanEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowPlanEngine.swift; sourceTree = "<group>"; };
 		AB0000000000000000000073 /* GlowPlanRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowPlanRepository.swift; sourceTree = "<group>"; };
@@ -587,6 +595,10 @@
 				isa = PBXGroup;
 				children = (
 					AB0000000000000000000068 /* GlowScoreSectionView.swift */,
+					AB0000000000000000000106 /* GlowScoreHeroCardView.swift */,
+					AB0000000000000000000108 /* GlowScoreHeroComponents.swift */,
+					AB0000000000000000000109 /* GlowScoreHeroSupport.swift */,
+					AB0000000000000000000107 /* GlowScoreBreakdownCardView.swift */,
 				);
 				path = Views;
 				sourceTree = "<group>";
@@ -859,6 +871,10 @@
 					AA0000000000000000000064 /* GlowRepository.swift in Sources */,
 					AA0000000000000000000065 /* GlowScoreViewModel.swift in Sources */,
 					AA0000000000000000000066 /* GlowScoreSectionView.swift in Sources */,
+					AA0000000000000000000106 /* GlowScoreHeroCardView.swift in Sources */,
+					AA0000000000000000000108 /* GlowScoreHeroComponents.swift in Sources */,
+					AA0000000000000000000109 /* GlowScoreHeroSupport.swift in Sources */,
+					AA0000000000000000000107 /* GlowScoreBreakdownCardView.swift in Sources */,
 					AA0000000000000000000074 /* DailyPlanViewModel.swift in Sources */,
 					AA0000000000000000000075 /* DailyPlanSectionView.swift in Sources */,
 					AA0000000000000000000081 /* RecapViewModel.swift in Sources */,

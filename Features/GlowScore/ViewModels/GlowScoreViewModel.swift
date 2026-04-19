@@ -28,15 +28,7 @@ final class GlowScoreViewModel: ObservableObject {
     }
 
     var subtitle: String {
-        "A deterministic score built from today's available inputs."
-    }
-
-    var availabilityText: String {
-        guard let score else {
-            return "Waiting for today's score."
-        }
-
-        return "\(score.availableCategoriesCount.formatted()) of \(GlowScoreCategory.allCases.count.formatted()) categories available"
+        "Built from today's available inputs."
     }
 
     func loadStoredScore(for date: Date = Date()) async {
